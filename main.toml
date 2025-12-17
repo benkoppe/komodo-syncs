@@ -45,6 +45,17 @@ executions = [
 ]
 
 ####################
+# repos
+####################
+
+[[repo]]
+name = "komodo-syncs"
+description = "Monorepo for Komodo syncs"
+[repo.config]
+repo = "benkoppe/komodo-syncs"
+git_account = "benkoppe"
+
+####################
 # syncs
 ####################
 
@@ -52,7 +63,6 @@ executions = [
 [[resource_sync]]
 name = "komodo-main"
 [resource_sync.config]
-repo = "benkoppe/komodo-syncs"
-git_account = "benkoppe"
+linked_repo = "komodo-syncs"
 resource_path = ["main.toml"]
 delete = true
