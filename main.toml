@@ -3,3 +3,18 @@ name = "Local"
 [server.config]
 address = "https://komodo-periphery:8120"
 enabled = true
+
+[[builder]]
+name = "Local"
+[builder.config]
+type = "Server"
+params.server_id = "Local"
+
+# this sync
+[[resource_sync]]
+name = "komodo-main"
+[resource_sync.config]
+repo = "benkoppe/komodo-syncs"
+git_account = "benkoppe"
+resource_path = ["main.toml"]
+delete = true
