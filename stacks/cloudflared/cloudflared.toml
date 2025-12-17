@@ -8,9 +8,4 @@ auto_pull = true
 auto_update = true
 destroy_before_deploy = true
 
-file_contents = """
-services:
-  cloudflared:
-    image: cloudflare/cloudflared:latest
-    restart: unless-stopped
-"""
+file_paths = ["compose.yml"]
