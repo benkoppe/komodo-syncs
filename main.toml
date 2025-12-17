@@ -66,4 +66,3 @@ name = "komodo-main"
 resource_path = ["main.toml", "syncs"]
 repo = "benkoppe/komodo-syncs"
 git_account = "benkoppe"
-delete = true
