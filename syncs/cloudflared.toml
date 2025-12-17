@@ -2,4 +2,4 @@
 name = "cloudflared-local"
 deploy = true
 [stack.config]
-server_id = "local"
+server_id = "Local"
