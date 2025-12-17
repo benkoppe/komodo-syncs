@@ -8,4 +8,5 @@ auto_pull = true
 auto_update = true
 destroy_before_deploy = true
 
-file_paths = ["compose.yml"]
+linked_repo = "komodo-syncs"
+run_directory = "./stacks/cloudflared"
