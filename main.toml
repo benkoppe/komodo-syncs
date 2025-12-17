@@ -63,13 +63,7 @@ git_account = "benkoppe"
 [[resource_sync]]
 name = "komodo-main"
 [resource_sync.config]
+resource_path = ["main.toml", "syncs/cloudflared.toml"]
 repo = "benkoppe/komodo-syncs"
 git_account = "benkoppe"
-resource_path = ["main.toml"]
 delete = true
-
-[[resource_sync]]
-name = "cloudflared"
-[resource_sync.config]
-linked_repo = "komodo-syncs"
-resource_path = ["syncs/cloudfalred.toml"]
