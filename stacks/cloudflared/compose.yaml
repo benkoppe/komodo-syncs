@@ -2,3 +2,11 @@ services:
   cloudflared:
     image: cloudflare/cloudflared:latest
     restart: unless-stopped
+    env_file: .env
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARED_TOKEN}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+
+networks:
+  default:
+    name: cloudflared
