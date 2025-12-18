@@ -1,0 +1,19 @@
+[[stack]]
+name = "newt-local"
+deploy = true
+[stack.config]
+server_id = "Local"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "komodo-syncs"
+run_directory = "./stacks/common/newt"
+
+environment = """
+PANGOLIN_ENDPOINT=https://pangolin.thekoppe.com
+DOCKER_SOCKET=/var/run/docker.sock
+NEWT_ID=[[NEWT_ID]]
+NEWT_SECRET=[[NEWT_SECRET]]
+"""
