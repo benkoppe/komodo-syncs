@@ -4,12 +4,14 @@
 
 [[server]]
 name = "Local"
+tags = ["syncs"]
 [server.config]
 address = "https://komodo-periphery:8120"
 enabled = true
 
 [[builder]]
 name = "Local"
+tags = ["syncs"]
 [builder.config]
 type = "Server"
 params.server_id = "Local"
@@ -51,6 +53,7 @@ executions = [
 [[repo]]
 name = "komodo-syncs"
 description = "Monorepo for Komodo syncs"
+tags = ["syncs"]
 [repo.config]
 repo = "benkoppe/komodo-syncs"
 git_account = "benkoppe"
@@ -67,3 +70,4 @@ tags = ["syncs"]
 resource_path = ["main.toml", "stacks"]
 repo = "benkoppe/komodo-syncs"
 git_account = "benkoppe"
+match_tags = ["syncs"]
