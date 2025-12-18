@@ -14,8 +14,28 @@ services:
     restart: unless-stopped
     networks:
       - cloudflared
+  # calibre:
+  #   image: lscr.io/linuxserver/calibre:latest
+  #   container_name: calibre
+  #   security_opt:
+  #     - seccomp:unconfined #optional
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=1000
+  #     - TZ=America/Los_Angeles
+  #     - PASSWORD=twisted-epic-expletive-islamist-syrup #optional
+  #     # - CLI_ARGS= #optional
+  #   volumes:
+  #     - /etc/komodo/stacks/calibre/config:/config
+  #   # ports:
+  #   #   - 8080:8080
+  #   #   - 8181:8181
+  #   #   - 8081:8081
+  #   restart: unless-stopped
+  #   networks:
+  #     - cloudflared
 
 networks:
   cloudflared:
-    external: true # port 8083
+    external: true # (CALIBRE) ports 8080, 8181, 8081 ; (CALIBRE-WEB) port 8083
 
