@@ -17,5 +17,5 @@ pre_deploy.command = """
   PWD="./stacks/local/test"
   chmod +x ./docker-sops.sh
 
-  ./docker-sops.sh --output .env --decrypt $PWD/local.env
+  ./docker-sops.sh --output $PWD/.env --decrypt $PWD/local.env
 """
