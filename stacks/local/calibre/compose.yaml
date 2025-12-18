@@ -13,7 +13,7 @@ services:
       - /etc/komodo/stacks/calibre/config/Calibre Library:/books
     restart: unless-stopped
     networks:
-      - newt
+      - cloudflared
   # calibre:
   #   image: lscr.io/linuxserver/calibre:latest
   #   container_name: calibre
@@ -36,6 +36,6 @@ services:
   #     - cloudflared
 
 networks:
-  newt:
+  cloudflared:
     external: true # (CALIBRE) ports 8080, 8181, 8081 ; (CALIBRE-WEB) port 8083
 

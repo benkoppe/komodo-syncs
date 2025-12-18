@@ -1,14 +1,14 @@
-# [[stack]]
-# name = "calibre-web"
-# deploy = true
-# tags = ["syncs"]
-# [stack.config]
-# server_id = "Local"
-#
-# auto_pull = true
-# auto_update = true
-# destroy_before_deploy = true
-#
-# linked_repo = "komodo-syncs"
-# reclone = true
-# run_directory = "./stacks/local/calibre"
+[[stack]]
+name = "calibre-web"
+deploy = true
+tags = ["syncs"]
+[stack.config]
+server_id = "Local"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "komodo-syncs"
+reclone = true
+run_directory = "./stacks/local/calibre"
