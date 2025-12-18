@@ -12,3 +12,16 @@ linked_repo = "komodo-syncs"
 run_directory = "./stacks/cloudflared"
 
 environment = "CLOUDFLARED_TOKEN=[[CLOUDFLARED_TOKEN]]"
+
+
+[[stack]]
+name = "quick test"
+deploy = true
+[stack.config]
+server_id = "Local"
+
+auto_pull = true
+linked_repo = "komodo-syncs"
+run_directory = "./stacks/test"
+
+environment = "CLOUDFLARED_TOKEN=[[CLOUDFLARED_TOKEN]]"
