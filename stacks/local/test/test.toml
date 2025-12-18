@@ -11,3 +11,11 @@ destroy_before_deploy = true
 
 linked_repo = "komodo-syncs"
 run_directory = "./stacks/local/test"
+
+pre_deploy.path = "../../../"
+pre_deploy.command = """
+  PWD="./stacks/local/test"
+  SOPS="docker run --rm -v "$(pwd):/work" -v "/config/komodo-syncs:/root/.ssh/id_ed25519" -w /work rayou/sops:latest"
+
+  $SOPS --output .env --decrypt $PWD/local.env
+"""
