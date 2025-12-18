@@ -1,6 +1,7 @@
 [[stack]]
 name = "calibre-web"
 deploy = true
+tags = ["syncs"]
 [stack.config]
 server_id = "Local"
 

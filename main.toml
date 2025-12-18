@@ -62,6 +62,7 @@ git_account = "benkoppe"
 # main
 [[resource_sync]]
 name = "komodo-main"
+tags = ["syncs"]
 [resource_sync.config]
 resource_path = ["main.toml", "stacks"]
 repo = "benkoppe/komodo-syncs"
