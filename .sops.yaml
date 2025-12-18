@@ -1,0 +1,5 @@
+creation_rules:
+  - path_regex: local.env$
+    age: >-
+      age1lq5guvuugw57nv88px3gvcn3lc39tw4pw3tt3pfgjr76sjt3ketstg6cqm,
+      ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFr99QDBpKY7JbSvezCsZzcdUZlJg86f3UchKN/6jQ3w local
