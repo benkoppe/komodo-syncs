@@ -1,0 +1,21 @@
+services:
+  calibre-web:
+    image: lscr.io/linuxserver/calibre-web:latest
+    container_name: calibre-web
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Los_Angeles
+      - DOCKER_MODS=linuxserver/mods:universal-calibre #optional
+      - OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
+    volumes:
+      - ./web/data:/config
+      - ./config/Calibre Library:/books
+    restart: unless-stopped
+    networks:
+      - cloudflared
+
+networks:
+  cloudflared:
+    external: true # port 8083
+
