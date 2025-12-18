@@ -70,4 +70,5 @@ tags = ["syncs"]
 resource_path = ["main.toml", "stacks"]
 repo = "benkoppe/komodo-syncs"
 git_account = "benkoppe"
+delete = true
 match_tags = ["syncs"]
