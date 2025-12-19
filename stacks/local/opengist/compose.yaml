@@ -1,0 +1,16 @@
+services:
+  opengist:
+    image: ghcr.io/thomiceli/opengist:1.10
+    container_name: opengist
+    restart: unless-stopped
+    volumes:
+      - "/etc/komodo/stacks/opengist:/opengist"
+    env_file:
+      - .env
+      - local.env
+    networks:
+      - cloudflared
+
+networks:
+  cloudflared:
+    external: true
