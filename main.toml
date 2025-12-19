@@ -84,3 +84,28 @@ resource_path = ["main.toml", "stacks"]
 linked_repo = "komodo-syncs"
 delete = true
 match_tags = ["syncs"]
+
+####################
+# update procedure
+####################
+
+[[procedure]]
+name = "Webhook Syncs Update"
+[[procedure.config.stage]]
+name = "Pull Syncs"
+enabled = true
+executions = [
+  { execution.type = "PullRepo", execution.params.repo = "komodo-syncs", enabled = true },
+]
+[[procedure.config.stage]]
+name = "Update Main Sync"
+enabled = true
+executions = [
+  { execution.type = "RunSync", execution.params.sync = "komodo-main", enabled = true },
+]
+[[procedure.config.stage]]
+name = "Update all Deploys"
+enabled = true
+executions = [
+  { execution.type = "BatchDeployStackIfChanged", execution.params.pattern = "*", enabled = true },
+]
