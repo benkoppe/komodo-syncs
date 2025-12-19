@@ -1,0 +1,6 @@
+services:
+  test:
+    image: bash:latest
+    stdin_open: true
+    tty: true
+    env_file: local.env
