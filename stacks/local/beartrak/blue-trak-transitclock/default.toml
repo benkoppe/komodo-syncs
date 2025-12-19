@@ -18,12 +18,6 @@ environment = """
   GTFS_URL=https://webapps.fo.umich.edu/transit_uploads/google_transit.zip
   TRAK_URL=https://bluetrakapi.thekoppe.com
 """
-
-pre_deploy.command = """
-  BASE="/etc/komodo/repos/komodo-syncs"
-  PWD="$BASE/stacks/local/beartrak/blue-trak-transitclock"
-  SOPS="$BASE/docker-sops.sh"
-
-  chmod +x $SOPS
-  $SOPS --output ./.env --decrypt $PWD/local.env
-"""
+additional_env_files = [
+  "/etc/komodo/repos/komodo-syncs/stacks/local/beartrak/blue-trak-transitclock/local.env",
+]
