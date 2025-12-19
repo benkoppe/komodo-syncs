@@ -10,7 +10,6 @@ auto_update = true
 destroy_before_deploy = true
 
 linked_repo = "trak-backend"
-reclone = true
 
 run_directory = "otp"
 environment = """
