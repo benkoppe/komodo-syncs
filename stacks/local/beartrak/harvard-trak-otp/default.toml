@@ -1,6 +1,7 @@
 [[stack]]
 name = "harvard-trak-otp"
 tags = ["syncs"]
+deploy = true
 [stack.config]
 server_id = "Local"
 
