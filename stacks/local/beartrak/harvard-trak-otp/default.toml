@@ -1,0 +1,18 @@
+[[stack]]
+name = "harvard-trak-otp"
+tags = ["syncs"]
+[stack.config]
+server_id = "Local"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "trak-backend"
+reclone = true
+
+run_directory = "otp"
+environment = """
+  JAVA_TOOL_OPTIONS=-Xmx512m
+  SCHOOL=harvard
+"""

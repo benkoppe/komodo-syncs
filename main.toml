@@ -58,6 +58,13 @@ tags = ["syncs"]
 repo = "benkoppe/komodo-syncs"
 git_account = "benkoppe"
 
+[[repo]]
+name = "trak-backend"
+tags = ["syncs"]
+[repo.config]
+repo = "benkoppe/bear-trak-backend"
+git_account = "benkoppe"
+
 ####################
 # syncs
 ####################

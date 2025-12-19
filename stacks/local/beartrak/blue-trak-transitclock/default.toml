@@ -1,0 +1,29 @@
+[[stack]]
+name = "blue-trak-transitclock"
+tags = ["syncs"]
+[stack.config]
+server_id = "Local"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "trak-backend"
+reclone = true
+
+run_directory = "transitclock"
+environment = """
+  AGENCYID=1
+  AGENCYNAME=UMICH
+  GTFS_URL=https://webapps.fo.umich.edu/transit_uploads/google_transit.zip
+  TRAK_URL=https://bluetrakapi.thekoppe.com
+"""
+additional_env_files = ["decrypted.env"]
+
+pre_deploy.command = """
+  PWD="$(pwd)"
+  cd ../../../../
+
+  chmod +x ./docker-sops.sh 
+  ./docker-sops.sh --output $PWD/decrypted.env --decrypt $PWD/local.env
+"""
