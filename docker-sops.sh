@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+KEY_FILE="/config/komodo-syncs"
+
 docker run --rm \
   -v "$(pwd):/work" \
-  -e SOPS_AGE_KEY="$(cat /config/komodo-syncs)" \
+  -e SOPS_AGE_KEY="$(cat $KEY_FILE)" \
   -w /work \
   rayou/sops:latest \
   "$@"
