@@ -20,9 +20,10 @@ environment = """
 """
 
 pre_deploy.command = """
-  PWD="$(pwd)"
-  cd ../../../../
+  BASE="/etc/komodo/repos/komodo-syncs"
+  PWD="$BASE/stacks/local/beartrak/blue-trak-transitclock"
+  SOPS="$BASE/docker-sops.sh"
 
-  chmod +x ./docker-sops.sh 
-  ./docker-sops.sh --output $PWD/.env --decrypt $PWD/local.env
+  chmod +x $SOPS
+  $SOPS --output ./.env --decrypt $PWD/local.env
 """
