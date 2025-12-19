@@ -75,7 +75,6 @@ name = "komodo-main"
 tags = ["syncs"]
 [resource_sync.config]
 resource_path = ["main.toml", "stacks"]
-repo = "benkoppe/komodo-syncs"
-git_account = "benkoppe"
+linked_repo = "komodo-syncs"
 delete = true
 match_tags = ["syncs"]
