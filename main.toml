@@ -55,8 +55,10 @@ name = "komodo-syncs"
 description = "Monorepo for Komodo syncs"
 tags = ["syncs"]
 [repo.config]
+server_id = "Local"
 repo = "benkoppe/komodo-syncs"
 git_account = "benkoppe"
+on_clone.path = "."
 on_clone.command = """
   chmod +x ./docker-sops.sh
   find -name '*.env' -exec ./docker-sops.sh -i --decrypt {} \\;
