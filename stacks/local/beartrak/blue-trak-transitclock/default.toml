@@ -18,12 +18,11 @@ environment = """
   GTFS_URL=https://webapps.fo.umich.edu/transit_uploads/google_transit.zip
   TRAK_URL=https://bluetrakapi.thekoppe.com
 """
-additional_env_files = ["decrypted.env"]
 
 pre_deploy.command = """
   PWD="$(pwd)"
   cd ../../../../
 
   chmod +x ./docker-sops.sh 
-  ./docker-sops.sh --output $PWD/decrypted.env --decrypt $PWD/local.env
+  ./docker-sops.sh --output $PWD/.env --decrypt $PWD/local.env
 """
