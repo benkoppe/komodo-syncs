@@ -91,6 +91,7 @@ match_tags = ["syncs"]
 
 [[procedure]]
 name = "Webhook Syncs Update"
+tags = ["syncs"]
 [[procedure.config.stage]]
 name = "Pull Syncs"
 enabled = true
