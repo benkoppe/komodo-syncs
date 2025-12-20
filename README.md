@@ -10,7 +10,7 @@ Monorepo containing all syncs I use for [Komodo Docker Control](https://komo.do/
 
 ## Secrets
 
-All secrets are stored encrypted in the repo using `sops`.
+All secrets are stored encrypted within the repo using `sops`.
 
 - Use `nix develop` to enter a development shell with `sops` installed and env vars set to point to the master key.
 - Encryption is fine-grained, so `local.env` for example can only be decrypted by the `local` server.
