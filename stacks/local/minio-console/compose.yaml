@@ -3,6 +3,7 @@ services:
     image: ghcr.io/georgmangold/console
     environment:
       - CONSOLE_MINIO_SERVER=https://minio.thekoppe.com
+      - CONSOLE_MINIO_REGION=us-east-1
     restart: unless-stopped
     networks:
       - newt
