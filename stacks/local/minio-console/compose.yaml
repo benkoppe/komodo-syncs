@@ -1,0 +1,12 @@
+services:
+  console:
+    image: ghcr.io/georgmangold/console
+    environment:
+      - CONSOLE_MINIO_SERVER=https://minio.thekoppe.com
+    restart: unless-stopped
+    networks:
+      - newt
+
+networks:
+  newt:
+    external: true # port 9090
