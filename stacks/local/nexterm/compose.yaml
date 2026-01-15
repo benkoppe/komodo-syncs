@@ -6,6 +6,5 @@ services:
     volumes:
       - "/var/lib/komodo/stacks/nexterm/data:/app/data"
     env_file:
-      - .env
       - local.env
     network_mode: host

@@ -12,6 +12,3 @@ destroy_before_deploy = true
 linked_repo = "komodo-syncs"
 reclone = true
 run_directory = "./stacks/local/nexterm"
-
-environment = """
-"""
