@@ -1,0 +1,11 @@
+services:
+  nexterm:
+    image: germannewsmaker/nexterm:1.2.0-BETA
+    container_name: nexterm
+    restart: always
+    volumes:
+      - "/var/lib/komodo/stacks/nexterm/data:/app/data"
+    env_file:
+      - .env
+      - local.env
+    network_mode: host
