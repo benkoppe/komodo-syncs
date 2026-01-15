@@ -19,5 +19,5 @@ environment = """
   TRAK_URL=https://bluetrakapi.thekoppe.com
 """
 additional_env_files = [
-  "/etc/komodo/repos/komodo-syncs/stacks/local/beartrak/blue-trak-transitclock/local.env",
+  "/var/lib/komodo/repos/komodo-syncs/stacks/local/beartrak/blue-trak-transitclock/local.env",
 ]
