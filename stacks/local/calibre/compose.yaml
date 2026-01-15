@@ -9,8 +9,8 @@ services:
       - DOCKER_MODS=linuxserver/mods:universal-calibre #optional
       - OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
     volumes:
-      - "./web/data:/config"
-      - "./config/Calibre Library:/books"
+      - "/var/lib/komodo/stacks/calibre/web/data:/config"
+      - "/var/lib/komodo/stacks/calibre/config/Calibre Library:/books"
     restart: unless-stopped
     networks:
       - cloudflared
