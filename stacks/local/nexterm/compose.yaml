@@ -1,6 +1,6 @@
 services:
   nexterm:
-    image: germannewsmaker/nexterm:1.2.0-BETA
+    image: germannewsmaker/nexterm:latest
     container_name: nexterm
     restart: always
     volumes:
