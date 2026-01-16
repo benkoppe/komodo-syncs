@@ -10,7 +10,6 @@ auto_update = true
 destroy_before_deploy = true
 
 linked_repo = "komodo-syncs-bird"
-reclone = true
 run_directory = "./stacks/bird/beartrak/bear-trak-go"
 
 run_directory = "go-server"
