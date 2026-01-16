@@ -1,0 +1,19 @@
+[[stack]]
+name = "blue-trak-otp"
+tags = ["syncs"]
+deploy = true
+[stack.config]
+server_id = "bird"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "komodo-syncs-bird"
+run_directory = "./stacks/bird/beartrak/blue-trak-otp"
+
+environment = """
+  JAVA_TOOL_OPTIONS=-Xmx512m
+  SCHOOL=umich
+  SOURCE_COMMIT=main-linux-arm64
+"""
