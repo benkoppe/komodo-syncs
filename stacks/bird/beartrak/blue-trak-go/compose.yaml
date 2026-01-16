@@ -1,0 +1,24 @@
+services:
+  blue-trak-go:
+    extends:
+      file: /var/lib/komodo/repos/trak-backend-bird/go-server/compose.yaml
+      service: go-server
+    container_name: blue-trak-go
+    networks:
+      - cloudflared
+      - default
+    env_file:
+      - .env
+      - bird.env
+  db:
+    extends:
+      file: /var/lib/komodo/repos/trak-backend-bird/go-server/compose.yaml
+      service: db
+
+volumes:
+  db-data:
+  chromedp-profile:
+
+networks:
+  cloudflared:
+    external: true

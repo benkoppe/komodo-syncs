@@ -1,0 +1,19 @@
+[[stack]]
+name = "blue-trak-go"
+tags = ["syncs"]
+deploy = true
+[stack.config]
+server_id = "bird"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "komodo-syncs-bird"
+run_directory = "./stacks/bird/beartrak/blue-trak-go"
+
+environment = """
+  SCHOOL_CODE=umich
+  SOURCE_COMMIT=main-linux-arm64
+"""
+additional_env_files = ["./bird.env"]
