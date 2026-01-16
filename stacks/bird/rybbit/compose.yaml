@@ -48,8 +48,7 @@ services:
       - SERVICE_FQDN_RYBBIT_80
     restart: unless-stopped
     networks:
-      - newt-tunnel
-      - tunnel
+      - cloudflared
       - default
     volumes:
       - type: bind
@@ -110,9 +109,7 @@ volumes:
   postgres_data:
 
 networks:
-  newt-tunnel:
-    external: true
-  tunnel:
+  cloudflared:
     external: true
 # networks:
 #   default: {}
