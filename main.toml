@@ -62,7 +62,7 @@ git_account = "benkoppe"
 on_pull.path = "."
 on_pull.command = """
   chmod +x ./docker-sops.sh
-  find . -name '*local.env' -exec ./docker-sops.sh -i --decrypt {} +
+  find . -name '*local.env' -exec ./docker-sops.sh -i --decrypt {} \\;
 """
 
 [[repo]]
