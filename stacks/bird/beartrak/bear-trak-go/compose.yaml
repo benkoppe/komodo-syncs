@@ -14,10 +14,9 @@ services:
     extends:
       file: /var/lib/komodo/repos/trak-backend-bird/go-server/compose.yaml
       service: db
-    volumes:
-      - ./db-data:/var/lib/postgresql/data
 
 volumes:
+  db-data:
   chromedp-profile:
 
 networks:
