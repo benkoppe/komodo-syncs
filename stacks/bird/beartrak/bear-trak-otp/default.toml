@@ -15,4 +15,5 @@ run_directory = "./stacks/bird/beartrak/bear-trak-otp"
 environment = """
   JAVA_TOOL_OPTIONS=-Xmx512m
   SCHOOL=cornell
+  SOURCE_COMMIT=main-linux-arm64
 """
