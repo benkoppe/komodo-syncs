@@ -17,5 +17,5 @@ environment = """
   OPENROUTER_MODEL=deepseek/deepseek-chat-v3-0324:free
 """
 additional_env_files = [
-  "/var/lib/komodo/repos/komodo-syncs/stacks/bird/beartrak/bear-trak-backend/bird.env",
+  "/var/lib/komodo/repos/komodo-syncs-bird/stacks/bird/beartrak/bear-trak-backend/bird.env",
 ]
