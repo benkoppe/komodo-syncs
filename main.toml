@@ -7,6 +7,7 @@ name = "Local"
 tags = ["syncs"]
 [server.config]
 address = "https://komodo-periphery:8120"
+region = "us-west-1"
 enabled = true
 
 [[builder]]
