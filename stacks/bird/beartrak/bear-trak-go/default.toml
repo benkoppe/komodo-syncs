@@ -9,7 +9,9 @@ auto_pull = true
 auto_update = true
 destroy_before_deploy = true
 
-linked_repo = "trak-backend-bird"
+linked_repo = "komodo-syncs-bird"
+reclone = true
+run_directory = "./stacks/bird/beartrak/bear-trak-go"
 
 run_directory = "go-server"
 environment = """
@@ -17,6 +19,4 @@ environment = """
   OPENROUTER_MODEL=deepseek/deepseek-chat-v3-0324:free
   SOURCE_COMMIT=main-linux-arm64
 """
-additional_env_files = [
-  "/var/lib/komodo/repos/komodo-syncs-bird/stacks/bird/beartrak/bear-trak-go/bird.env",
-]
+additional_env_files = ["bird.env"]
