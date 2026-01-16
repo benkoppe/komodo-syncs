@@ -1,7 +1,7 @@
 [[stack]]
 name = "blue-trak-go"
 tags = ["syncs"]
-deploy = true
+deploy = false
 [stack.config]
 server_id = "bird"
 
