@@ -1,0 +1,24 @@
+[[stack]]
+name = "rybbit"
+deploy = true
+tags = ["syncs"]
+[stack.config]
+server_id = "bird"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "komodo-syncs-bird"
+run_directory = "./stacks/bird/rybbit"
+
+environment = """
+  CLICKHOUSE_DB=analytics
+  CLICKHOUSE_USER=default
+  DISABLE_SIGNUP=true
+  POSTGRES_DB=analytics
+  POSTGRES_USER=frog
+  SERVICE_FQDN_RYBBIT=https://rybbit.thekoppe.com
+  SERVICE_FQDN_RYBBIT_80=https://rybbit.thekoppe.com
+"""
+additional_env_files = ["./bird.env"]
