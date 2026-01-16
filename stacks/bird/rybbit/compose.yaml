@@ -92,16 +92,16 @@ services:
     volumes:
       - "clickhouse_data:/var/lib/clickhouse"
       - type: bind
-        source: ./clickhouse_config/enable_json.xml
+        source: ./clickhouse-config/enable_json.xml
         target: /etc/clickhouse-server/config.d/enable_json.xml
       - type: bind
-        source: ./clickhouse_config/logging_rules.xml
+        source: ./clickhouse-config/logging_rules.xml
         target: /etc/clickhouse-server/config.d/logging_rules.xml
       - type: bind
-        source: ./clickhouse_config/network.xml
+        source: ./clickhouse-config/network.xml
         target: /etc/clickhouse-server/config.d/network.xml
       - type: bind
-        source: ./clickhouse_config/user_logging.xml
+        source: ./clickhouse-config/user_logging.xml
         target: /etc/clickhouse-server/config.d/user_logging.xml
 
 volumes:
