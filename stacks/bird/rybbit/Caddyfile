@@ -1,0 +1,12 @@
+:80 {
+  route {
+    reverse_proxy /api/* http://rybbit_backend:3001 {
+      header_up Host {http.reverse_proxy.upstream.hostport}
+      header_up X-Real-IP {http.request.header.X-Real-IP}
+    }
+    reverse_proxy http://rybbit_client:3002 {
+      header_up Host {http.reverse_proxy.upstream.hostport}
+      header_up X-Real-IP {http.request.header.X-Real-IP}
+    }
+  }
+}
