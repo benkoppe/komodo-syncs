@@ -17,6 +17,9 @@ services:
     volumes:
       - ./db-data:/var/lib/postgresql/data
 
+volumes:
+  chromedp-profile:
+
 networks:
   cloudflared:
     external: true
