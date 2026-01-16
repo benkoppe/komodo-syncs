@@ -1,0 +1,14 @@
+services:
+  bear-trak-otp:
+    extends:
+      file: /var/lib/komodo/repos/trak-backend-bird/otp/compose.yaml
+      service: otp
+    container_name: bear-trak-otp
+    networks:
+      - cloudflared
+    env_file:
+      - .env
+
+networks:
+  cloudflared:
+    external: true
