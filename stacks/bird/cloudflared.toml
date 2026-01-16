@@ -9,7 +9,7 @@ auto_pull = true
 auto_update = true
 destroy_before_deploy = true
 
-linked_repo = "komodo-syncs"
+linked_repo = "komodo-syncs-bird"
 run_directory = "./stacks/common/cloudflared"
 
 environment = "CLOUDFLARED_TOKEN=[[CLOUDFLARED_TOKEN]]"

@@ -9,7 +9,7 @@ auto_pull = true
 auto_update = true
 destroy_before_deploy = true
 
-linked_repo = "trak-backend"
+linked_repo = "trak-backend-bird"
 
 run_directory = "go-server"
 environment = """
