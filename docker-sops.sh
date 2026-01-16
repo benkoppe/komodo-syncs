@@ -6,5 +6,5 @@ docker run --rm \
   -v "$(pwd):/work" \
   -e SOPS_AGE_KEY="$(cat $KEY_FILE)" \
   -w /work \
-  rayou/sops:latest \
+  ghcr.io/getsops/sops:latest \
   "$@"
