@@ -82,6 +82,7 @@ on_pull.command = """
 name = "trak-backend"
 tags = ["syncs"]
 [repo.config]
+server_id = "Local"
 repo = "benkoppe/bear-trak-backend"
 git_account = "benkoppe"
 
