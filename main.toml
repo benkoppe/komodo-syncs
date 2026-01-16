@@ -99,6 +99,7 @@ name = "Pull Syncs"
 enabled = true
 executions = [
   { execution.type = "PullRepo", execution.params.repo = "komodo-syncs", enabled = true },
+  { execution.type = "PullRepo", execution.params.repo = "komodo-syncs-bird", enabled = true },
 ]
 [[procedure.config.stage]]
 name = "Update Main Sync"
