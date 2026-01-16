@@ -3,3 +3,7 @@ creation_rules:
     age: >-
       age1lq5guvuugw57nv88px3gvcn3lc39tw4pw3tt3pfgjr76sjt3ketstg6cqm,
       age1rvsrx3qc0fz3376p69apmke0qs9jeaum7wewe7x0veaxeu2ejsxsx2qa0a
+  - path_regex: bird.env$
+    age: >-
+      age1lq5guvuugw57nv88px3gvcn3lc39tw4pw3tt3pfgjr76sjt3ketstg6cqm,
+      age182rx6k4hzq4jfsyyc7mux8ysw9cx6z8tn95fdr40u2ugxkt0pgask2vdxt

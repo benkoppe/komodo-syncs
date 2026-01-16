@@ -16,6 +16,19 @@ tags = ["syncs"]
 type = "Server"
 params.server_id = "Local"
 
+#####################
+# remote servers
+#####################
+
+[[server]]
+name = "bird"
+description = "Oracle cloud ARM server"
+tags = ["syncs"]
+[server.config]
+address = "https://100.112.62.127:8120"
+region = "us-west-2"
+enabled = true
+
 ####################
 # default procedures
 ####################
