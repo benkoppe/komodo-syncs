@@ -16,4 +16,6 @@ environment = """
   SCHOOL_CODE=cornell
   OPENROUTER_MODEL=deepseek/deepseek-chat-v3-0324:free
 """
-additional_env_files = ["./bird.env"]
+additional_env_files = [
+  "/var/lib/komodo/repos/komodo-syncs/stacks/bird/beartrak/bear-trak-backend/bird.env",
+]
