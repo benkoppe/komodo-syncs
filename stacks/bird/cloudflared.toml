@@ -1,0 +1,15 @@
+[[stack]]
+name = "cloudflared-bird"
+deploy = true
+tags = ["syncs"]
+[stack.config]
+server_id = "bird"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "komodo-syncs"
+run_directory = "./stacks/common/cloudflared"
+
+environment = "CLOUDFLARED_TOKEN=[[CLOUDFLARED_TOKEN]]"
