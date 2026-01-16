@@ -15,6 +15,7 @@ run_directory = "go-server"
 environment = """
   SCHOOL_CODE=cornell
   OPENROUTER_MODEL=deepseek/deepseek-chat-v3-0324:free
+  SOURCE_COMMIT=main-linux-arm64
 """
 additional_env_files = [
   "/var/lib/komodo/repos/komodo-syncs-bird/stacks/bird/beartrak/bear-trak-go/bird.env",
