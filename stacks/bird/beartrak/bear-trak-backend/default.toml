@@ -1,0 +1,19 @@
+[[stack]]
+name = "bear-trak-go"
+tags = ["syncs"]
+deploy = true
+[stack.config]
+server_id = "bird"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "trak-backend"
+
+run_directory = "go-server"
+environment = """
+  SCHOOL_CODE=cornell
+  OPENROUTER_MODEL=deepseek/deepseek-chat-v3-0324:free
+"""
+additional_env_files = ["./bird.env"]
