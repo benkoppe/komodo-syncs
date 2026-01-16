@@ -12,7 +12,6 @@ destroy_before_deploy = true
 linked_repo = "komodo-syncs-bird"
 run_directory = "./stacks/bird/beartrak/bear-trak-go"
 
-run_directory = "go-server"
 environment = """
   SCHOOL_CODE=cornell
   OPENROUTER_MODEL=deepseek/deepseek-chat-v3-0324:free
