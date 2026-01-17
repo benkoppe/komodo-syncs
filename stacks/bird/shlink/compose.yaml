@@ -21,8 +21,7 @@ services:
       timeout: 10s
       retries: 15
     networks:
-      - tunnel
-      - newt-tunnel
+      - cloudflared
   shlink-web:
     image: shlinkio/shlink-web-client
     environment:
@@ -41,14 +40,11 @@ services:
       timeout: 10s
       retries: 15
     networks:
-      - tunnel
-      - newt-tunnel
+      - cloudflared
 
 volumes:
   shlink-data:
 
 networks:
-  tunnel:
-    external: true
-  newt-tunnel:
+  cloudflared:
     external: true
