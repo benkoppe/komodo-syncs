@@ -1,0 +1,20 @@
+[[stack]]
+name = "shlink"
+deploy = true
+tags = ["syncs"]
+[stack.config]
+server_id = "bird"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "komodo-syncs-bird"
+run_directory = "./stacks/bird/shlink"
+
+environment = """
+  SERVICE_FQDN_SHLINK=https://2ben.dev
+  SERVICE_FQDN_SHLINKWEB=https://urls.2ben.dev
+  SERVICE_URL_SHLINK=2ben.dev
+"""
+additional_env_files = ["./bird.env"]
