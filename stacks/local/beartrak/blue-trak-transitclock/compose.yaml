@@ -1,0 +1,24 @@
+services:
+  server:
+    extends:
+      file: /var/lib/komodo/repos/trak-backend/transitclock/compose.yaml
+      service: server
+    # container_name: blue-trak-transitclock
+    networks:
+      - cloudflared
+      - default
+    env_file:
+      - .env
+      - local.env
+  db:
+    extends:
+      file: /var/lib/komodo/repos/trak-backend/transitclock/compose.yaml
+      service: db
+
+volumes:
+  logs:
+  cache:
+
+networks:
+  cloudflared:
+    external: true

@@ -9,9 +9,9 @@ auto_pull = true
 auto_update = true
 destroy_before_deploy = true
 
-linked_repo = "trak-backend"
+linked_repo = "komodo-syncs"
+run_directory = "./stacks/local/beartrak/blue-trak-transitclock"
 
-run_directory = "transitclock"
 environment = """
   AGENCYID=1
   AGENCYNAME=UMICH
