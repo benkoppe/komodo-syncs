@@ -13,6 +13,7 @@ services:
       - "POSTGRES_USER=${POSTGRES_USER:-frog}"
       - "POSTGRES_PASSWORD=${SERVICE_PASSWORD_64_POSTGRES}"
       - "BETTER_AUTH_SECRET=${SERVICE_PASSWORD_64_BETTERAUTH}"
+      - "MAPBOX_TOKEN=${MAPBOX_TOKEN}"
       - "BASE_URL=https://rybbit.thekoppe.com"
       - "DISABLE_SIGNUP=${DISABLE_SIGNUP:-false}"
     depends_on:
