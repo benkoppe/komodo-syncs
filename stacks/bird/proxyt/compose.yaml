@@ -3,7 +3,7 @@ services:
     image: "shlinkio/shlink:stable"
     volumes:
       - proxyt-certs:/certs
-    command: serve --domain proxyt.thekoppe.com --email koppe.development@gmail.com --cert-dir /certs
+    command: serve --domain proxyt.thekoppe.com --cert-dir /certs --http-only
     networks:
       - cloudflared
 
