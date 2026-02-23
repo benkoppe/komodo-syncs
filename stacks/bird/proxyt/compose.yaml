@@ -5,6 +5,7 @@ services:
       - proxyt-certs:/certs
     command: serve --domain proxyt.thekoppe.com --cert-dir /certs --email koppe.development@gmail.com
     ports:
+      - "80:80"
       - "443:443"
 
 volumes:
