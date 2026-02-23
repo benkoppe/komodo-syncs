@@ -5,7 +5,7 @@ services:
       - proxyt-certs:/certs
     command: serve --domain proxyt.thekoppe.com --cert-dir /certs --http-only --issue=false
     ports:
-      - "443:443"
+      - "3030:80"
 
 volumes:
   proxyt-certs:
