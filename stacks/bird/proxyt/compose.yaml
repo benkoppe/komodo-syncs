@@ -1,6 +1,6 @@
 services:
   proxyt:
-    image: "shlinkio/shlink:stable"
+    image: "ghcr.io/jaxxstorm/proxyt:latest"
     volumes:
       - proxyt-certs:/certs
     command: serve --domain proxyt.thekoppe.com --cert-dir /certs --http-only
