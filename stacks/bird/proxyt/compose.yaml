@@ -4,12 +4,8 @@ services:
     volumes:
       - proxyt-certs:/certs
     command: serve --domain proxyt.thekoppe.com --cert-dir /certs --http-only --issue=false
-    networks:
-      - cloudflared
+    ports:
+      - "443:443"
 
 volumes:
   proxyt-certs:
-
-networks:
-  cloudflared:
-    external: true
