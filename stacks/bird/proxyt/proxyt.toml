@@ -14,4 +14,3 @@ run_directory = "./stacks/bird/proxyt"
 
 environment = """
 """
-additional_env_files = ["./bird.env"]
