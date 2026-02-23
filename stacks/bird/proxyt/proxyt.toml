@@ -1,0 +1,17 @@
+[[stack]]
+name = "proxyt"
+deploy = true
+tags = ["syncs"]
+[stack.config]
+server_id = "bird"
+
+auto_pull = true
+auto_update = true
+destroy_before_deploy = true
+
+linked_repo = "komodo-syncs-bird"
+run_directory = "./stacks/bird/proxyt"
+
+environment = """
+"""
+additional_env_files = ["./bird.env"]
