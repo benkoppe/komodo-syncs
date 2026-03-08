@@ -28,3 +28,10 @@ tags = ["syncs"]
 server_id = "bird"
 repo = "benkoppe/bear-trak-backend"
 git_account = "benkoppe"
+
+[[builder]]
+name = "bird"
+tags = ["syncs"]
+[builder.config]
+type = "Server"
+params.server_id = "bird"
