@@ -13,4 +13,9 @@ linked_repo = "komodo-syncs-bird"
 run_directory = "./stacks/bird/convex"
 
 environment = """
+  CONVEX_CLOUD_ORIGIN=https://convex.thekoppe.com
+  CONVEX_SITE_ORIGIN=https://convexsite.thekoppe.com
+  DO_NOT_REQUIRE_SSL=true
+  INSTANCE_NAME=thekoppe
 """
+additional_env_files = ["./bird.env"]
