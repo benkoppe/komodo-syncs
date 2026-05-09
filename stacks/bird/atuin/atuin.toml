@@ -16,4 +16,4 @@ environment = """
   ATUIN_DB_NAME=atuin
   ATUIN_DB_USERNAME=atuin
 """
-
+additional_env_files = ["./bird.env"]
